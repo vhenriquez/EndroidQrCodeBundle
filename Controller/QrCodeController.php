@@ -23,7 +23,7 @@ class QrCodeController extends Controller
 {
     /**
      *
-     * @Route("/{text}.{extension}", name="endroid_qrcode", requirements={"text"="[^/\\]+", "extension"="jpg|png|gif"})
+     * @Route("/{text}.{extension}", name="endroid_qrcode", requirements={"text"="[\w\W]+", "extension"="jpg|png|gif"})
      *
      */
     public function generateAction($text, $extension)
