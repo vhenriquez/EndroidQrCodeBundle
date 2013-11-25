@@ -29,6 +29,7 @@ class QrCodeController extends Controller
     public function generateAction($text, $extension)
     {
         $qrCode = new QrCode();
+        if($size = $this->getRequest()->get('size')) $qrCode->setSize($size);
         $qrCode->setText($text);
         $qrCode = $qrCode->get($extension);
 
